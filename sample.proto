@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package sample;
+
+message GetCounterRequest {}
+
+message GetCounterResponse {
+  int32 value = 1;
+}
+
+service Sample {
+  rpc GetCounter (GetCounterRequest) returns (GetCounterResponse);
+}
+
