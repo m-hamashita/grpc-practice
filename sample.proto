@@ -8,7 +8,15 @@ message GetCounterResponse {
   int32 value = 1;
 }
 
+message GetModelRequest {}
+
+message GetModelResponse {
+  string name = 1;
+  string data = 2;
+}
+
 service Sample {
   rpc GetCounter (GetCounterRequest) returns (GetCounterResponse);
+  rpc GetModel (GetModelRequest) returns (GetModelResponse);
 }
 
